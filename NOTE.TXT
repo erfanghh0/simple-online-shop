@@ -1,0 +1,420 @@
+   if(this.state.keyboard == 1){
+
+      
+      if(this.state.searchuser == "@"){
+        return<View><View  style={{height:height1/12,borderColor:"#7fc3e0",borderBottomWidth:2,padding:5,marginTop:5,backgroundColor:"white",flexDirection:"row"}}><Ionn name="close" onPress={()=>{this.setState({keyboard:0})}} size={30} style={{flex:1,marginTop:5}}/><TextInput editable={true}
+        onChangeText={(value)=>{this.setState({searchuser:value});}}  onPressIn={()=>{this.props.n}} placeholder="در دیجیکالا جست و جو کنید" placeholderTextColor="#5295df"  style={{flex:9,height:height1/13-15,backgroundColor:"#e5f5f7",borderRadius:5}} /></View>
+        <Text>محصول خود را جست و جو کنید!</Text></View>
+      }  
+      return <View style={{width:"100%",height:height1}}>
+        <View  style={{height:height1/12,borderColor:"#7fc3e0",borderBottomWidth:2,padding:5,marginTop:5,backgroundColor:"white",flexDirection:"row"}}><Ionn name="close" onPress={()=>{this.setState({searchuser:"@"});this.setState({keyboard:0})}} size={30} style={{flex:1,marginTop:5}}/><TextInput editable={true}
+         onChangeText={(value)=>{this.setState({searchuser:value});}}  placeholder="در دیجیکالا جست و جو کنید" placeholderTextColor="#5295df"  style={{flex:9,height:height1/13-15,backgroundColor:"#e5f5f7",borderRadius:5}} /></View>
+        <ScrollView style={{height:height1,width:"100%"}}>
+        {Data.map((item)=>{
+         //console.log(item.name.includes("شلوار"))
+         
+         if(item.name !== undefined){
+           if(this.state.searchuser == ""){
+             this.setState({searchuser:"@"})
+            
+           }
+          if(item.name.toLowerCase().includes(this.state.searchuser.toLowerCase())){
+            return/*<Text>{item.name}</Text>*/<ScrollView style={{width:"100%",height:height1/4}}>
+              
+            <TouchableOpacity style={{height:height/1.5}} onPress={()=>{this.setState({cate: item.cate_1});this.props.navigation.navigate('search',{id:item.id})}}><View style={{flexDirection:"row"}} ><Image source={{uri:Data[item.id].prev1}}   style={{height:height1/5,width:width1/3}}/><View style={{backgroundColor:"white",width:width/1.5,padding:5}} ><Text  style={{backgroundColor:"white",textAlign:"right",width:"100%",fontSize:12,alignSelf:"flex-start"}} numberOfLines={2}>{Data[item.id].name}</Text><Text onPress={()=>{console.log(this.props.deff)}} style={{alignSelf:"flex-end"}}>رنگ {item.colors.length} مورد موجود <View style={{backgroundColor:item.colorname,borderRadius:50,height:15,width:15}}></View><Text>  {item.color}  </Text></Text><Text>قیمت {Data[item.id].price}</Text></View></View></TouchableOpacity>
+          </ScrollView> 
+          }
+          
+         }
+            
+          
+        })}
+        </ScrollView>
+        </View>
+    } 
+
+    if(this.state.keyboard == 1){
+
+      
+      if(this.state.searchuser == "@"){
+        return<View><View  style={{height:height1/12,borderColor:"#7fc3e0",borderBottomWidth:2,padding:5,marginTop:5,backgroundColor:"white",flexDirection:"row"}}><Ionn name="close" onPress={()=>{this.setState({keyboard:0})}} size={30} style={{flex:1,marginTop:5}}/><TextInput editable={true}
+        onChangeText={(value)=>{this.setState({searchuser:value});}}  placeholder="در دیجیکالا جست و جو کنید" placeholderTextColor="#5295df"  style={{flex:9,height:height1/13-15,backgroundColor:"#e5f5f7",borderRadius:5}} /></View>
+        <Text>محصول خود را جست و جو کنید!</Text></View>
+      }  
+      return <View style={{width:"100%",height:height1}}>
+        <View  style={{height:height1/12,borderColor:"#7fc3e0",borderBottomWidth:2,padding:5,marginTop:5,backgroundColor:"white",flexDirection:"row"}}><Ionn name="close" onPress={()=>{this.setState({searchuser:"@"});this.setState({keyboard:0})}} size={30} style={{flex:1,marginTop:5}}/><TextInput editable={true}
+         onChangeText={(value)=>{this.setState({searchuser:value});}}  placeholder="در دیجیکالا جست و جو کنید" placeholderTextColor="#5295df"  style={{flex:9,height:height1/13-15,backgroundColor:"#e5f5f7",borderRadius:5}} /></View>
+        <ScrollView style={{height:height1,width:"100%"}}>
+        {Data.map((item)=>{
+         //console.log(item.name.includes("شلوار"))
+         
+         if(item.name !== undefined){
+           if(this.state.searchuser == ""){
+             this.setState({searchuser:"@"})
+            
+           }
+          if(item.name.toLowerCase().includes(this.state.searchuser.toLowerCase())){
+            return/*<Text>{item.name}</Text>*/<ScrollView style={{width:"100%",height:height1/4}}>
+              
+            <TouchableOpacity style={{height:height/1.5}} onPress={()=>{this.setState({cate: item.cate_1});this.props.navigation.navigate('search',{id:item.id})}}><View style={{flexDirection:"row"}} ><Image source={{uri:Data[item.id].prev1}}   style={{height:height1/5,width:width1/3}}/><View style={{backgroundColor:"white",width:width/1.5,padding:5}} ><Text  style={{backgroundColor:"white",textAlign:"right",width:"100%",fontSize:12,alignSelf:"flex-start"}} numberOfLines={2}>{Data[item.id].name}</Text><Text onPress={()=>{console.log(this.props.deff)}} style={{alignSelf:"flex-end"}}>رنگ {item.colors.length} مورد موجود <View style={{backgroundColor:item.colorname,borderRadius:50,height:15,width:15}}></View><Text>  {item.color}  </Text></Text><Text>قیمت {Data[item.id].price}</Text></View></View></TouchableOpacity>
+          </ScrollView> 
+          }
+          
+         }
+            
+          
+        })}
+        </ScrollView>
+        </View>
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if(this.state.dataputed==null){
+return <ScrollView>
+           <View>
+        <Text onPress={()=>{console.warn(UserInfo)}}>{this.state.name +"\n"+this.state.lastname+"\n"+this.state.adress+"\n"+this.state.picAdress+"\n"+this.state.telephone}</Text>
+        <View ><Text style={{marginRight:5}}>نام*</Text><TextInput value={this.state.name} onChangeText={(val)=>{this.setState({name:val})}}  placeholderTextColor="gray" placeholder={this.state.UserInfo1.name} style={{height:height1/20,width:"95%",borderWidth:2,marginHorizontal:10,borderRadius:10,marginVertical:5,borderColor:this.state.namecolor}}/></View>
+        <View ><Text style={{marginRight:5}}>نام خانوادگی*</Text><TextInput value={this.state.lastname} onChangeText={(val)=>{this.setState({lastname:val})}} placeholder={this.state.UserInfo1.lastname} style={{height:height1/20,width:"95%",borderWidth:2,marginHorizontal:10,borderRadius:10,marginVertical:5,borderColor:this.state.lastnamecolor}}/></View>
+        <View ><Text style={{marginRight:5}}>آدرس*</Text><TextInput value={this.state.adress} onChangeText={(val)=>{this.setState({adress:val})}} placeholder={this.state.UserInfo1.adress} style={{height:height1/20,width:"95%",borderWidth:2,marginHorizontal:10,borderRadius:10,marginVertical:5,borderColor:this.state.adresscolor}}/></View>
+        <View ><Text style={{marginRight:5}}>ایمیل</Text><TextInput value={this.state.email} onChangeText={(val)=>{this.setState({email:val})}} placeholder={this.state.UserInfo1.email} style={{height:height1/20,width:"95%",borderWidth:2,marginHorizontal:10,borderRadius:10,marginVertical:5,borderColor:"#7fc3e0"}}/></View>
+        <View ><Text style={{marginRight:5}}>شماره تلفن *</Text><TextInput value={this.state.telephone==null?this.setState({telephone:0}): this.state.telephone.toString()} onChangeText={(val)=>{this.setState({telephone:val.toString()})}} placeholder={this.state.UserInfo1.email} keyboardType="phone-pad" style={{height:height1/20,width:"95%",borderWidth:2,marginHorizontal:10,borderRadius:10,marginVertical:5,borderColor:this.state.telephonecolor}}/></View>
+        <View animation="zoomIn"style={{marginTop:10,borderBottomColor:"dodgerblue",borderBottomWidth:3}}><Text style={{borderBottomColor:"dodgerblue",borderBottomWidth:3,fontSize:height1/40,textAlign:"center"}}>جنسیت خود را انتحاب کنید*</Text><View style={{flexDirection:"row",width:"100%"}}>
+  <View style={{flex:1,paddingTop:10}}><View><Ionn onPress={()=>{this.setState({gender:0})}} name="ios-man"  style={{alignSelf:"center",color:this.state.gender==0?"blue" :"black"}} size={height1/15} /><Text style={{textAlign:"center",fontSize:30}}>مرد</Text></View></View>
+  <View style={{flex:1,paddingTop:10,paddingBottom:5}}><View><Ionn name="woman" onPress={()=>{this.setState({gender:1})}} style={{alignSelf:"center",color:this.state.gender==1?"blue" :"black"}} size={height1/15}  /><Text style={{textAlign:"center",fontSize:30}}>زن</Text></View></View>
+  </View>
+  
+  </View>
+      <View style={{alignItems:"center",}}><TouchableOpacity onPress={()=>{this.RBSheet.open()}} ><Image  style={{width:height1/4.5,height:height1/4.5,borderRadius:height1,opacity:1}} source={{uri:this.state.picAdress}}></Image></TouchableOpacity></View>       
+        <Button onPress={()=>{
+          
+          console.log(this.state.telephone==null&&this.state.name==null&&this.state.lastname==null&&this.state.adress==null)
+          AsyncStorage.setItem("name",this.state.name)
+          AsyncStorage.setItem("lastname",this.state.lastname)
+          AsyncStorage.setItem("email",this.state.email)
+          AsyncStorage.setItem("adress",this.state.adress)
+          AsyncStorage.setItem("picadress",this.state.picAdress)
+          AsyncStorage.setItem("telephone",this.state.telephone.toString())
+          AsyncStorage.setItem("gender",this.state.gender.toString())
+             AsyncStorage.setItem("dataputed","1")
+
+  
+          AsyncStorage.getItem("name").then((value)=>{this.setState({name:value})})
+      AsyncStorage.getItem("lastname").then((value)=>{this.setState({lastname:value})})
+      AsyncStorage.getItem("email").then((value)=>{this.setState({email:value})})
+      AsyncStorage.getItem("adress").then((value)=>{this.setState({adress:value})})
+      AsyncStorage.getItem("picadress").then((value)=>{this.setState({picAdress:value})})
+      AsyncStorage.getItem("telephone").then((value)=>{this.setState({telephone:value})})
+      AsyncStorage.getItem("gender").then((value)=>{this.setState({gender:Number(value)})})
+      AsyncStorage.getItem("dataputed").then((value)=>{this.setState({dataputed:value})})
+  
+          //Alert.alert(this.state.picAdress)
+          this.setState({namecolor:"#7fc3e0"})
+          this.setState({lastnamecolor:"#7fc3e0"})
+          this.setState({adresscolor:"#7fc3e0"})
+          this.setState({telephonecolor:"#7fc3e0"})
+  
+          if ( this.state.name == "" || this.state.name == null ) {
+            this.setState({namecolor:"red"})
+            Alert.alert("فیلد های قرمز را پر کنید")
+          }else{this.setState({namecolor:"#7fc3e0"})
+        console.warn(this.state.name)
+        }
+           if(this.state.lastname == ""|| this.state.lastname == null){
+            this.setState({lastnamecolor:"red"})
+            Alert.alert("فیلد های قرمز را پر کنید")
+          }else{this.setState({lastnamecolor:"#7fc3e0"})
+          console.warn(this.state.name)
+          }
+           if(this.state.adress==""|| this.state.adress == null){
+            this.setState({adresscolor:"red"})
+            Alert.alert("فیلد های قرمز را پر کنید")
+            
+          } if(this.state.telephone == 0|| this.state.telephone == null){
+            this.setState({telephonecolor:"red"})
+            Alert.alert("فیلد های قرمز را پر کنید")
+          } if(this.state.picAdress == ""){
+  
+          }/*this.setState({modalVisible:false
+          /*if(this.state.telephonecolor=="#7fc3e0"&&this.state.namecolor=="#7fc3e0"&&this.state.lastnamecolor=="#7fc3e0"&&this.state.adresscolor=="#7fc3e0"){
+            this.setState({modalVisible:false})
+          }*/
+          console.log(this.state.telephone==null||this.state.name==null||this.state.lastname==null||this.state.adress==null)
+          if(this.state.telephone==0){
+            //Alert.alert("sasdsdsdsdsdsd")
+            this.setState({modalVisible:true})
+          }else if(this.state.name==null||this.state.name==""){
+            this.setState({modalVisible:true})
+          }else if(this.state.lastname==null||this.state.lastname==""){
+            this.setState({modalVisible:true})
+          }else if(this.state.adress==null ||this.state.adress==""){
+            this.setState({modalVisible:true})
+          }
+          else if(this.state.name!==null&&this.state.telephone!==0&&this.state.lastname!==null&&this.state.adress!==null){
+            this.setState({modalVisible:false})
+          }
+          }} title="save data"/></View>
+          </ScrollView>
+        
+  
+    }else if(this.state.dataputed=="1"){
+      <ScrollView style={{}}>
+      <View>
+        <Text onPress={()=>{console.warn(UserInfo)}}>{this.state.name +"\n"+this.state.lastname+"\n"+this.state.adress+"\n"+this.state.picAdress+"\n"+this.state.telephone}</Text>
+        <View ><Text style={{marginRight:5}}>نام*</Text><TextInput value={this.state.name} onChangeText={(val)=>{this.setState({name:val})}}  placeholderTextColor="gray" placeholder={this.state.UserInfo1.name} style={{height:height1/20,width:"95%",borderWidth:2,marginHorizontal:10,borderRadius:10,marginVertical:5,borderColor:this.state.name==null?"red":this.state.namecolor}}/></View>
+        <View ><Text style={{marginRight:5}}>نام خانوادگی*</Text><TextInput value={this.state.lastname} onChangeText={(val)=>{this.setState({lastname:val})}} placeholder={this.state.UserInfo1.lastname} style={{height:height1/20,width:"95%",borderWidth:2,marginHorizontal:10,borderRadius:10,marginVertical:5,borderColor:this.state.lastnamecolor}}/></View>
+        <View ><Text style={{marginRight:5}}>آدرس*</Text><TextInput value={this.state.adress} onChangeText={(val)=>{this.setState({adress:val})}} placeholder={this.state.UserInfo1.adress} style={{height:height1/20,width:"95%",borderWidth:2,marginHorizontal:10,borderRadius:10,marginVertical:5,borderColor:this.state.adresscolor}}/></View>
+        <View ><Text style={{marginRight:5}}>ایمیل</Text><TextInput value={this.state.email} onChangeText={(val)=>{this.setState({email:val})}} placeholder={this.state.UserInfo1.email} style={{height:height1/20,width:"95%",borderWidth:2,marginHorizontal:10,borderRadius:10,marginVertical:5,borderColor:"#7fc3e0"}}/></View>
+        <View ><Text style={{marginRight:5}}>شماره تلفن *</Text><TextInput value={this.state.telephone==null?this.setState({telephone:0}): this.state.telephone.toString()} onChangeText={(val)=>{this.setState({telephone:val.toString()})}} placeholder={this.state.UserInfo1.email} keyboardType="phone-pad" style={{height:height1/20,width:"95%",borderWidth:2,marginHorizontal:10,borderRadius:10,marginVertical:5,borderColor:this.state.telephonecolor}}/></View>
+        <View animation="zoomIn"style={{marginTop:10,borderBottomColor:"dodgerblue",borderBottomWidth:3}}><Text style={{borderBottomColor:"dodgerblue",borderBottomWidth:3,fontSize:height1/40,textAlign:"center"}}>جنسیت خود را انتحاب کنید*</Text><View style={{flexDirection:"row",width:"100%"}}>
+  <View style={{flex:1,paddingTop:10}}><View><Ionn onPress={()=>{this.setState({gender:0})}} name="ios-man"  style={{alignSelf:"center",color:this.state.gender==0?"blue" :"black"}} size={height1/15} /><Text style={{textAlign:"center",fontSize:30}}>مرد</Text></View></View>
+  <View style={{flex:1,paddingTop:10,paddingBottom:5}}><View><Ionn name="woman" onPress={()=>{this.setState({gender:1})}} style={{alignSelf:"center",color:this.state.gender==1?"blue" :"black"}} size={height1/15}  /><Text style={{textAlign:"center",fontSize:30}}>زن</Text></View></View>
+  </View>
+  
+  </View>
+      <View style={{alignItems:"center",}}><TouchableOpacity onPress={()=>{this.RBSheet.open()}} ><Image  style={{width:height1/4.5,height:height1/4.5,borderRadius:height1,opacity:1}} source={{uri:this.state.picAdress}}></Image></TouchableOpacity></View>       
+        <Button onPress={()=>{
+          
+          
+          /*AsyncStorage.setItem("name",this.state.name)
+          AsyncStorage.setItem("lastname",this.state.lastname)
+          AsyncStorage.setItem("email",this.state.email)
+          AsyncStorage.setItem("adress",this.state.adress)
+          AsyncStorage.setItem("picadress",this.state.picAdress)
+          AsyncStorage.setItem("telephone",this.state.telephone.toString())
+          AsyncStorage.setItem("gender",this.state.gender.toString())
+  
+          AsyncStorage.getItem("name").then((value)=>{this.setState({name:value})})
+      AsyncStorage.getItem("lastname").then((value)=>{this.setState({lastname:value})})
+      AsyncStorage.getItem("email").then((value)=>{this.setState({email:value})})
+      AsyncStorage.getItem("adress").then((value)=>{this.setState({adress:value})})
+      AsyncStorage.getItem("picadress").then((value)=>{this.setState({picAdress:value})})
+      AsyncStorage.getItem("telephone").then((value)=>{this.setState({telephone:value})})
+      AsyncStorage.getItem("gender").then((value)=>{this.setState({gender:Number(value)})})
+  
+          //Alert.alert(this.state.picAdress)
+          this.setState({namecolor:"#7fc3e0"})
+          this.setState({lastnamecolor:"#7fc3e0"})
+          this.setState({adresscolor:"#7fc3e0"})
+          this.setState({telephonecolor:"#7fc3e0"})
+  
+          if ( this.state.name == "" || this.state.name == null ) {
+            this.setState({namecolor:"red"})
+            Alert.alert("فیلد های قرمز را پر کنید")
+          }else{this.setState({namecolor:"#7fc3e0"})
+        console.warn(this.state.name)
+        }
+           if(this.state.lastname == ""|| this.state.lastname == null){
+            this.setState({lastnamecolor:"red"})
+            Alert.alert("فیلد های قرمز را پر کنید")
+          }else{this.setState({lastnamecolor:"#7fc3e0"})
+          console.warn(this.state.name)
+          }
+           if(this.state.adress==""|| this.state.adress == null){
+            this.setState({adresscolor:"red"})
+            Alert.alert("فیلد های قرمز را پر کنید")
+            
+          } if(this.state.telephone == 0|| this.state.telephone == null){
+            this.setState({telephonecolor:"red"})
+            Alert.alert("فیلد های قرمز را پر کنید")
+          } if(this.state.picAdress == ""){
+  
+          }*/
+          this.setState({modalVisible:true})
+          }} title="edit data"/>
+        <RBSheet
+  ref={ref => {
+    this.RBSheet = ref;
+  }}
+  closeOnDragDown={true}
+  height={300}
+  openDuration={250}
+  
+  customStyles={{
+    draggableIcon: {
+      backgroundColor: "#000",
+    },
+    container: {
+      
+      borderTopRightRadius:15,borderTopLeftRadius:15
+    }
+  }}
+  >
+  <TouchableOpacity onPress={()=>{PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE);launchImageLibrary(options, response => {
+  console.log("Response = ", response);
+  
+  if (response.didCancel) {
+  console.log("User cancelled image picker");
+  } else if (response.error) {
+  console.log("ImagePicker Error: ", response.error);
+  } else {
+  let source = response;
+  image = response
+  AsyncStorage.setItem("image",JSON.stringify(source))
+  AsyncStorage.getItem("image").then((value)=>{console.log("sssssssssssssssssssssssssaaaaaaaaaaaa"+value)})
+  console.log("ssssssssssssssssssssss"+image)
+  this.setState({picAdress:source.assets[0].uri})
+  console.log("sourcessss11111111111111111111", source.assets[0].uri);
+  return this.setState({picAdress:source.assets[0].uri})
+  }
+  })    }} style={{marginVertical:20}}><View style={{flexDirection:"row-reverse"}}><Ionn name="image" style={{marginHorizontal:5,textAlign:"center",alignSelf:"center"}} size={height1/20}/><Text style={{fontSize:height1/20}}>انتخاب از گالری</Text></View></TouchableOpacity>
+  <TouchableOpacity onPress={()=>{PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.CAMERA);launchCamera(options, response => {
+  console.log("Response = ", response);
+  
+  if (response.didCancel) {
+  console.log("User cancelled image picker");
+  } else if (response.error) {
+  console.log("ImagePicker Error: ", response.error);
+  } else {
+  let source = response;
+  image = response
+  AsyncStorage.setItem("image",JSON.stringify(source))
+  AsyncStorage.getItem("image").then((value)=>{console.log("sssssssssssssssssssssssssaaaaaaaaaaaa"+value)})
+  console.log("ssssssssssssssssssssss"+image)
+  this.setState({picAdress:source.assets[0].uri})
+  console.log("sourcessss11111111111111111111", source.assets[0].uri);
+  return this.setState({picAdress:source.assets[0].uri})
+  }
+  })}} style={{marginVertical:20}}><View style={{flexDirection:"row-reverse"}}><Ionn name="camera" style={{marginHorizontal:5,textAlign:"center",alignSelf:"center"}} size={height1/20}/><Text style={{fontSize:height1/20}}>گرفتن عکس</Text></View></TouchableOpacity>
+  <TouchableOpacity onPress={()=>{Alert.alert("ssssssss")}} style={{marginVertical:20}}><View style={{flexDirection:"row-reverse"}}><Ionn name="camera" style={{marginHorizontal:5,textAlign:"center",alignSelf:"center"}} size={height1/20}/><Text style={{fontSize:height1/20}}>مشاهده عکس</Text></View></TouchableOpacity>
+  </RBSheet>
+      </View>
+      <Modal
+            animationType="slide"
+            transparent={false}
+            visible={this.state.modalVisible}
+            onRequestClose={() => {
+              Alert.alert('Modal has been closed.');
+            }}><ScrollView>
+           <View>
+        <Text onPress={()=>{console.warn(UserInfo)}}>{this.state.name +"\n"+this.state.lastname+"\n"+this.state.adress+"\n"+this.state.picAdress+"\n"+this.state.telephone}</Text>
+        <View ><Text style={{marginRight:5}}>نام*</Text><TextInput value={this.state.name} onChangeText={(val)=>{this.setState({name:val})}}  placeholderTextColor="gray" placeholder={this.state.UserInfo1.name} style={{height:height1/20,width:"95%",borderWidth:2,marginHorizontal:10,borderRadius:10,marginVertical:5,borderColor:this.state.namecolor}}/></View>
+        <View ><Text style={{marginRight:5}}>نام خانوادگی*</Text><TextInput value={this.state.lastname} onChangeText={(val)=>{this.setState({lastname:val})}} placeholder={this.state.UserInfo1.lastname} style={{height:height1/20,width:"95%",borderWidth:2,marginHorizontal:10,borderRadius:10,marginVertical:5,borderColor:this.state.lastnamecolor}}/></View>
+        <View ><Text style={{marginRight:5}}>آدرس*</Text><TextInput value={this.state.adress} onChangeText={(val)=>{this.setState({adress:val})}} placeholder={this.state.UserInfo1.adress} style={{height:height1/20,width:"95%",borderWidth:2,marginHorizontal:10,borderRadius:10,marginVertical:5,borderColor:this.state.adresscolor}}/></View>
+        <View ><Text style={{marginRight:5}}>ایمیل</Text><TextInput value={this.state.email} onChangeText={(val)=>{this.setState({email:val})}} placeholder={this.state.UserInfo1.email} style={{height:height1/20,width:"95%",borderWidth:2,marginHorizontal:10,borderRadius:10,marginVertical:5,borderColor:"#7fc3e0"}}/></View>
+        <View ><Text style={{marginRight:5}}>شماره تلفن *</Text><TextInput value={this.state.telephone==null?this.setState({telephone:0}): this.state.telephone.toString()} onChangeText={(val)=>{this.setState({telephone:val.toString()})}} placeholder={this.state.UserInfo1.email} keyboardType="phone-pad" style={{height:height1/20,width:"95%",borderWidth:2,marginHorizontal:10,borderRadius:10,marginVertical:5,borderColor:this.state.telephonecolor}}/></View>
+        <View animation="zoomIn"style={{marginTop:10,borderBottomColor:"dodgerblue",borderBottomWidth:3}}><Text style={{borderBottomColor:"dodgerblue",borderBottomWidth:3,fontSize:height1/40,textAlign:"center"}}>جنسیت خود را انتحاب کنید*</Text><View style={{flexDirection:"row",width:"100%"}}>
+  <View style={{flex:1,paddingTop:10}}><View><Ionn onPress={()=>{this.setState({gender:0})}} name="ios-man"  style={{alignSelf:"center",color:this.state.gender==0?"blue" :"black"}} size={height1/15} /><Text style={{textAlign:"center",fontSize:30}}>مرد</Text></View></View>
+  <View style={{flex:1,paddingTop:10,paddingBottom:5}}><View><Ionn name="woman" onPress={()=>{this.setState({gender:1})}} style={{alignSelf:"center",color:this.state.gender==1?"blue" :"black"}} size={height1/15}  /><Text style={{textAlign:"center",fontSize:30}}>زن</Text></View></View>
+  </View>
+  
+  </View>
+      <View style={{alignItems:"center",}}><TouchableOpacity onPress={()=>{this.RBSheet.open()}} ><Image  style={{width:height1/4.5,height:height1/4.5,borderRadius:height1,opacity:1}} source={{uri:this.state.picAdress}}></Image></TouchableOpacity></View>       
+        <Button onPress={()=>{
+          
+          console.log(this.state.telephone==null&&this.state.name==null&&this.state.lastname==null&&this.state.adress==null)
+          AsyncStorage.setItem("name",this.state.name)
+          AsyncStorage.setItem("lastname",this.state.lastname)
+          AsyncStorage.setItem("email",this.state.email)
+          AsyncStorage.setItem("adress",this.state.adress)
+          AsyncStorage.setItem("picadress",this.state.picAdress)
+          AsyncStorage.setItem("telephone",this.state.telephone.toString())
+          AsyncStorage.setItem("gender",this.state.gender.toString())
+          
+  
+          AsyncStorage.getItem("name").then((value)=>{this.setState({name:value})})
+      AsyncStorage.getItem("lastname").then((value)=>{this.setState({lastname:value})})
+      AsyncStorage.getItem("email").then((value)=>{this.setState({email:value})})
+      AsyncStorage.getItem("adress").then((value)=>{this.setState({adress:value})})
+      AsyncStorage.getItem("picadress").then((value)=>{this.setState({picAdress:value})})
+      AsyncStorage.getItem("telephone").then((value)=>{this.setState({telephone:value})})
+      AsyncStorage.getItem("gender").then((value)=>{this.setState({gender:Number(value)})})
+  
+          //Alert.alert(this.state.picAdress)
+          this.setState({namecolor:"#7fc3e0"})
+          this.setState({lastnamecolor:"#7fc3e0"})
+          this.setState({adresscolor:"#7fc3e0"})
+          this.setState({telephonecolor:"#7fc3e0"})
+  
+          if ( this.state.name == "" || this.state.name == null ) {
+            this.setState({namecolor:"red"})
+            Alert.alert("فیلد های قرمز را پر کنید")
+          }else{this.setState({namecolor:"#7fc3e0"})
+        console.warn(this.state.name)
+        }
+           if(this.state.lastname == ""|| this.state.lastname == null){
+            this.setState({lastnamecolor:"red"})
+            Alert.alert("فیلد های قرمز را پر کنید")
+          }else{this.setState({lastnamecolor:"#7fc3e0"})
+          console.warn(this.state.name)
+          }
+           if(this.state.adress==""|| this.state.adress == null){
+            this.setState({adresscolor:"red"})
+            Alert.alert("فیلد های قرمز را پر کنید")
+            
+          } if(this.state.telephone == 0|| this.state.telephone == null){
+            this.setState({telephonecolor:"red"})
+            Alert.alert("فیلد های قرمز را پر کنید")
+          } if(this.state.picAdress == ""){
+  
+          }/*this.setState({modalVisible:false
+          /*if(this.state.telephonecolor=="#7fc3e0"&&this.state.namecolor=="#7fc3e0"&&this.state.lastnamecolor=="#7fc3e0"&&this.state.adresscolor=="#7fc3e0"){
+            this.setState({modalVisible:false})
+          }*/
+          console.log(this.state.telephone==null||this.state.name==null||this.state.lastname==null||this.state.adress==null)
+          if(this.state.telephone==0){
+            //Alert.alert("sasdsdsdsdsdsd")
+            this.setState({modalVisible:true})
+          }else if(this.state.name==null||this.state.name==""){
+            this.setState({modalVisible:true})
+          }else if(this.state.lastname==null||this.state.lastname==""){
+            this.setState({modalVisible:true})
+          }else if(this.state.adress==null ||this.state.adress==""){
+            this.setState({modalVisible:true})
+          }
+          else if(this.state.name!==null&&this.state.telephone!==0&&this.state.lastname!==null&&this.state.adress!==null){
+            this.setState({modalVisible:false})
+          }
+          }} title="save data"/></View>
+          </ScrollView>
+          </Modal>
+    </ScrollView>
+    }
+
+
+
